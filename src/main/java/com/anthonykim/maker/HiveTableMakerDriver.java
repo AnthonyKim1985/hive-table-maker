@@ -3,7 +3,7 @@ package com.anthonykim.maker;
 import java.io.*;
 
 /**
- * Created by hyuk0 on 2017-06-12.
+ * Created by Anthony Jinhyuk Kim on 2017-06-12.
  */
 public class HiveTableMakerDriver {
     public static void main(String[] args) throws Exception {
