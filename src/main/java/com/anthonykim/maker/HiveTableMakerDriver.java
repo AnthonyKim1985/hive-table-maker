@@ -40,8 +40,8 @@ public class HiveTableMakerDriver {
                     String line;
                     Pair pairs[] = new Pair[length];
                     while ((line = bufferedReader.readLine()) != null) {
-                        String row[] = line.split("[,]", -1);
-                        //System.out.printf("row: %d, header: %d, %s\n", row.length, header.length, line);
+                        String row[] = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
+                        //System.out.printf("row: %d, header: %d\n", row.length, header.length);
                         for (int i = 0; i < row.length; i++) {
                             String columnType = getDataType(row[i]);
                             if (!headerValidator[i])
